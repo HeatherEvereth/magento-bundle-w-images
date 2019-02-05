@@ -20,7 +20,9 @@
                            value="<?= /* @escapeNotVerified */ $_selection->getSelectionId() ?>"/>
                     <label class="label"
                            for="bundle-option-<?= /* @escapeNotVerified */ $_option->getId() ?>-<?= /* @escapeNotVerified */ $_selection->getSelectionId() ?>">
-                        <span class="product-details"><?= /* @escapeNotVerified */ $block->getSelectionQtyTitlePrice($_selection) ?></span>
+                        <span class="product-details">
+                          <span class="bundle-image"><? $block->getThumbnail($_selection);?></span>
+                          <?= /* @escapeNotVerified */ $block->getSelectionQtyTitlePrice($_selection) ?></span>
                     </label>
                     <div class="nested">
                         <div class="field qty qty-holder">
